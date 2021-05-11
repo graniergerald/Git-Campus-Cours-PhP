@@ -111,9 +111,9 @@
       <section class="section_exo1_condition">
 
         <div class="div_exo1_conditions cards cardsConditions">
-          <h2>Exo 8</h2>
-          <p>Exo sur...</p>
-          <p><?php ?></p>
+          <h2>Exo 8 Boucle For pour afficher les valeurs d'un tableaux</h2>
+          <p>Exo sur la boucle For qui appel tout les prénoms dans le tableaux grâce à l'incrémentation.</p>
+          <p><?php exo8ForArray($prenomArray1, $countprenomArray1)?></p>
 
         </div>
       </section>
@@ -121,15 +121,15 @@
       <section class="section_exo2_condition">
 
         <div class="div_exo2_conditions cards cardsConditions">
-          <h2>Exo 9</h2>
-          <p>Exo sur...<?php ?></p>
+          <h2>Exo 9 Boucle Foreach</h2>
+          <p>Crée un tableaux associatif avec 4 prénoms et l'âge de chaque personne. Chaque donnée du tableaux doit être annoncé. <?php exo9ForEachArray($PrenomAges) ?></p>
         </div>
       </section>
 
       <section class="section_exo3_condition">
         <div class="div_exo3_conditions cards cardsConditions">
-          <h2>Exo 10</h3>
-          <p>Exo sur... <?php ?></p>
+          <h2>Exo 10 Boucle Foreach Le Retour</h3>
+          <p>Le retour du ForEach : tableau multidimensionnelle associatif avec 5 produits çi-dessous.</p>
         </div>
       </section>
     </div>
@@ -140,11 +140,11 @@
 
       <div class="div_exo1_variable cards">
     
-        <h2>Exo 11</h2>
+        <h2>Exo 10 : </h2>
 
-        <p>Exo sur...<?php ?></p>
+        <p><?php exo10ForEachArray($Produits)?></p>
 
-        <p>...</p>
+        <p></p>
       </div>
 
     </section>

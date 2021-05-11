@@ -127,5 +127,31 @@ function mois ($mois) {
     }
 }
 
+function exo8ForArray ($prenomArray1, $countprenomArray1) {
+
+    for ( $x=0 ; $x < $countprenomArray1 ; $x++ ) {
+
+        echo $prenomArray1[$x]. ', ';
+
+    }}
+
+function exo9ForEachArray ($PrenomAges){
+    foreach($PrenomAges as $a => $b) {
+        echo $a. ' a ' .$b. ' ans<br>';
+
+    }}
+
+function exo10ForEachArray ($Produits){
+    foreach($Produits as $key=>$value) {
+        echo $key. ' : ';
+        foreach($value as $keyb=>$valueb) {
+            echo $keyb. ' - ' .$valueb;
+        }
+        
+    }
+}
+
+
+
 
 ?>
