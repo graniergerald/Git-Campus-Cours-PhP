@@ -8,6 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
   padding-right: 140px;
   padding-left: 140px;
+  padding-bottom: 50px;
   background-color: var(--bckg-color);
   color: var(--primary-color);
   font-size: 20px;
@@ -26,11 +27,25 @@ header {
 
 .ExoConditions {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  padding: 20px 0px;
 }
 
 .cardsConditions {
   margin-top: 30px;
-  width: 300px;
+  width: 325px;
   height: auto;
+}
+
+.div_2exo_cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.border-right-left {
+  border-right: 2px solid;
+  border-left: 2px solid;
+  padding-right: 70px;
+  padding-left: 70px;
 }
