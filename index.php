@@ -149,6 +149,29 @@
 
     </section>
 
+
+    <!-- Section 3 en ligne 2 exo -->
+    <div class="ExoConditions">
+
+      <section class="section_exo4_condition">
+        <div class="div_exo4_conditions cards cardsConditions">
+          <h2>Exo 11 sur...</h2>
+          <p>On fait... blblbl<?php ?></p>
+        </div>
+      
+      </section>
+
+
+      <section class="section_exo5_condition">
+        <div class="div_exo5_conditions cards cardsConditions">
+          <h2>Exo 12 sur...</h2>
+          <p>On fait.... vkvkvkvkv <?php ?></p>
+        </div>
+      
+      </section>
+
+    </div>
+
     
     <script src="js/index.js"></script>
 </body>

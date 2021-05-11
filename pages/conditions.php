@@ -145,13 +145,10 @@ function exo10ForEachArray ($Produits){
     foreach($Produits as $key=>$value) {
         echo $key. ' : ';
         foreach($value as $keyb=>$valueb) {
-            echo $keyb. ' - ' .$valueb;
+            echo $keyb. ' : ' .$valueb. ' / ';
         }
         
     }
 }
-
-
-
 
 ?>
