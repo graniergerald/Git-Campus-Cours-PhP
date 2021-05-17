@@ -151,4 +151,71 @@ function exo10ForEachArray ($Produits){
     }
 }
 
+function exo11ForEachArray ($Produits2){
+
+    echo '
+    <table>
+    ';
+    foreach($Produits2 as $key=>$value) {
+        echo '
+        <tr> <th>' .$key. '</th></tr>';
+        foreach($value as $keyb=>$valueb) {
+            echo '<tr><td>'  .$keyb. '</td><td>' .$valueb. '</td></tr> ';
+        }
+        
+    }
+
+    echo '</table>';
+}
+
+
+function prénomPerso ($bl, $bl2) {
+    echo 'Hello '. $bl. $bl2;
+}
+
+function addition ($a, $b) {
+    echo $a + $b;
+}
+
+function add3(&$padd) {
+    $padd = $padd + 3;
+    echo ' Résultat dans la fonction : ' .$padd;
+}
+
+
+function multecho($a, $b){
+    echo $a. '*' .$b. '=' .$a * $b. '<br>';
+}
+
+function multreturn($a, $b){
+    return $a. '*' .$b. '=' .$a * $b.'<br>';
+}
+
+function PrixTVA ($a) {
+    $x = $a * 1.20 ;
+    return;
+}
+
+function AffichagePrix ($a) {
+    echo 'Le prix sans TVA est de ' .$a. 'eu, le prix avec TVA est de : ' .$x ;
+}
+
+function DiffPrix ($a, $b) {
+    return abs($a - $b);
+};
+
+//foreach a voir pour les resultat de soustraction
+foreach($products as $key => $value) {
+    
+    $test = delta($value['mag1'], $value['mag2']);
+    return abs($test);
+}; 
+
+// fin de la fonction.
+
+
+function additionB(float $a, float $b) {
+    echo $a, ' + ' .$b. ' = ' .($a + $b). '<br>';
+};
+
 ?>

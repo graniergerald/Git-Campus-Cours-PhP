@@ -42,6 +42,24 @@ $Produits = [
     
 ];
 
+
+$Produits2 = [
+
+    'Audi A4' => ['Quantité' => 20, 'Prix' => 22000..'€', 'Couleur' => 'Rouge'],
+
+    'Toyota Supra' => ['Quantité' => 15, 'Prix' => 66000..'€', 'Couleur' => 'Bleu'],
+    
+    'Honda Civic' => ['Quantité' => 28, 'Prix' => 15000..'€', 'Couleur' => 'Jaune'],
+
+    'Peugeot 206' => ['Quantité' => 27, 'Prix' => 2500..'€', 'Couleur' => 'Vert'],
+    
+    'Renault 5' => ['Quantité' => 0, 'Prix' => 1000..'€', 'Couleur' => 'Violet'],
+    
+];
+
+$prénomPerso = "Gérald ";
+$questionCommentVa = "Comment ça va ?";
+
 //////////////////////////////////////////////////////////////////////////
 $presentation ='Je m\'appelle '.$prenomNom. ' et j\'ai ' .$ageGG;
 // simple quote n'interprete pas les variables (concatener avec simple quote et le "." pour chaque variable)
@@ -53,5 +71,27 @@ $stockOrange = 5;
 $stockPeche = 8;
 $stockTotal = $stockOrange + $stockPeche;
 $stock = "Le stock magasin des Oranges est de $stockOrange, le stock des Pèches est de $stockPeche. Le stock total des produits est de $stockTotal";
+
+
+//Warm Up tableaux diff de prix
+
+$diffPdt1 = 0;
+$diffPdt2 = 0;
+$diffPdt3 = 0;
+$diffPdt4 = 0;
+$diffPdt5 = 0;
+
+$PrixWarmUp = [
+
+    'Kinder Bueno 180g' => ['Casino, prix' => 3.50, 'Leclerc, prix' => 3.80, 'Différence de prix' => $diffPdt1],
+
+    'Prince Tout Choco' => ['Casino, prix' => 6, 'Leclerc, prix' => 6.66, 'Différence de prix' => $diffPdt2],
+    
+    'Figolu Figue' => ['Casino, prix' => 5.50, 'Leclerc, prix' => 5, 'Différence de prix' => $diffPdt3],
+
+    'Malteser' => ['Casino, prix' => 3, 'Leclerc, prix' => 4, 'Différence de prix' => $diffPdt4],
+    
+];   
+
 
 ?>

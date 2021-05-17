@@ -49,3 +49,20 @@ header {
   padding-right: 70px;
   padding-left: 70px;
 }
+
+/* TABLEAUX POUR HTML */
+
+table,
+td {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px 0px;
+}
+
+th {
+  margin-top: 100px;
+}
+
+.section_exo6_Switch {
+  margin: 30px 0px;
+}
