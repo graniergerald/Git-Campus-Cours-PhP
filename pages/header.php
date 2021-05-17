@@ -1,5 +1,5 @@
 <header>
 
-<h1>Premier cours de PHP au Campus :)</h1>
+<h1>Cours de PHP au Campus :)</h1>
 
 </header>

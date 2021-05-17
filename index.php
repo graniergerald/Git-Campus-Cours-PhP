@@ -268,13 +268,49 @@
       <!-- Section 1 en ligne 1 exo -->
     <section class="section_exo1_variable">
 
-      <div class="div_exo1_variable cards">
+      <div class="div_exo1_variable cards exo20">
 
-        <h2>Exo 20</h2>
+        <h2>Exo 20 sur le formulaire de contact</h2>
 
-        <p> blblbl <?php  ?></p>
+        <p> On récupère les données tapé par l'utilisateur dans formulaire.php<?php  ?></p>
 
-        <p> blblbl <?php ?></p>
+        <form class="S'enregistrer" method="post" action="">
+          <fieldset>
+            <legend>S'enregistrer</legend>
+            <p>
+              <label for="prenomducontact"> Votre Prénom</label>
+              <input type="text" name="prenomducontact" id="prenomducontact" maxlength="100" size="20" required >
+            </p>
+            <p>
+              <label for="nomducontact"> Votre Nom</label>
+              <input type="text" name="nomducontact" id="nomducontact" maxlength="20" size="23" required>
+            </p>
+            <p>
+              <label for="mailducontact"> Votre Mail</label>
+              <input type="email" name="mailducontact" id="mailducontact" maxlength="50" size="24" required>
+            </p>
+
+            <p>
+              <label for="ageducontact"> Age</label>
+              <input type="number" name="ageducontact" id="ageducontact" maxlength="3" size="3" required>
+            </p>
+
+            <p>
+               <label for="Admincontact">Etes-vous un Admin ?</label> 
+               <input type="radio" value="Admin" name="Admincontact" id="Admincontact">
+                <label for="Admincontact">Ou un user sans aucun droit ?</label> 
+               <input type="radio" value="Sous être" name="Admincontact" id="Admincontact">
+            </p>
+
+
+            <input type="submit" value="Envoyer">
+
+          </fieldset>
+		    </form>
+
+        <p>Voici les infos tapé par l'utilisateur : <?php AffichageDonnéeUser() ?></p>
+
+        <p>On test la faille XSS. On insère dans un input le script: < script>alert('Hacked !');<\script>. Une alerte JS s'affiche</p>
       </div>
 
     </section>

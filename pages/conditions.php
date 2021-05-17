@@ -218,4 +218,22 @@ function additionB(float $a, float $b) {
     echo $a, ' + ' .$b. ' = ' .($a + $b). '<br>';
 };
 
+function AffichageDonnéeUser() {
+
+    if(isset($_POST['prenomducontact']) && isset($_POST['nomducontact']) && isset($_POST['mailducontact']) && isset($_POST['Admincontact'])) {
+
+        $prenomducontactChars = htmlspecialchars($_POST['prenomducontact']);
+        $nomducontactChars = htmlspecialchars($_POST['nomducontact']);
+        $mailducontactChars = htmlspecialchars($_POST['mailducontact']);
+        $admincontactChars = htmlspecialchars($_POST['Admincontact']);
+
+        echo 'Prénom du contact : ' .$prenomducontactChars. '<br>';
+        echo 'Nom du contact : ' .$nomducontactChars. '<br>';
+        echo 'Mail du contact : ' .$mailducontactChars. '<br>';
+        echo 'Est-ce que le contact est un admin ? : ' .$admincontactChars. '<br>';
+    } else {
+        echo 'Il manque des infos';
+    }
+}
+
 ?>
