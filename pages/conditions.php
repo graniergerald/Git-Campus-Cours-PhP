@@ -20,11 +20,11 @@ function exo2conditions ($inscrit, $age) {
         echo "Quel est votre âge ? ";
 
         if ($age >= 18) {
-            echo "Utilisateur inscrit et majeur, accès autorisé";
+            echo "Utilisateur inscrit et majeur, accès autorisé.";
         }
 
         else {
-            echo "Utilisateur inscrit et mineur, accès restreint";
+            echo "Utilisateur inscrit et mineur, accès restreint.S";
         }
     }
 
@@ -143,9 +143,9 @@ function exo9ForEachArray ($PrenomAges){
 
 function exo10ForEachArray ($Produits){
     foreach($Produits as $key=>$value) {
-        echo $key. ' : ';
+        echo '<h4>' .$key. '</h4>';
         foreach($value as $keyb=>$valueb) {
-            echo $keyb. ' : ' .$valueb. ' / ';
+            echo $keyb. ' ' .$valueb. ' ';
         }
         
     }
@@ -169,10 +169,12 @@ function exo11ForEachArray ($Produits2){
 }
 
 
+//exo 14
 function prénomPerso ($bl, $bl2) {
     echo 'Hello '. $bl. $bl2;
 }
 
+//exo 15
 function addition ($a, $b) {
     echo $a + $b;
 }
@@ -182,7 +184,7 @@ function add3(&$padd) {
     echo ' Résultat dans la fonction : ' .$padd;
 }
 
-
+//exo 16
 function multecho($a, $b){
     echo $a. '*' .$b. '=' .$a * $b. '<br>';
 }
@@ -191,14 +193,21 @@ function multreturn($a, $b){
     return $a. '*' .$b. '=' .$a * $b.'<br>';
 }
 
-function PrixTVA ($a) {
-    $x = $a * 1.20 ;
-    return;
-}
+//ex17
+function PrixTVA20 ($a) {
+    $a = $a * 1.20 ;
+    echo 'Prix de' .$a ;
+    return($a);
+};
 
-function AffichagePrix ($a) {
-    echo 'Le prix sans TVA est de ' .$a. 'eu, le prix avec TVA est de : ' .$x ;
-}
+function AffichagePrixHT ($a) {
+    echo 'Le prix HT est de ' .$a. '€' ;
+};
+
+function AffichagePrixTTC ($a) {
+    echo 'Le prix TTC est de ' .$a. '€' ;
+};
+
 
 function DiffPrix ($a, $b) {
     return abs($a - $b);
@@ -222,6 +231,7 @@ function AffichageDonnéeUser() {
 
     if(isset($_POST['prenomducontact']) && isset($_POST['nomducontact']) && isset($_POST['mailducontact']) && isset($_POST['Admincontact'])) {
 
+        
         $prenomducontactChars = htmlspecialchars($_POST['prenomducontact']);
         $nomducontactChars = htmlspecialchars($_POST['nomducontact']);
         $mailducontactChars = htmlspecialchars($_POST['mailducontact']);
@@ -235,5 +245,52 @@ function AffichageDonnéeUser() {
         echo 'Il manque des infos';
     }
 }
+
+///////////////////////////////////////////////////////// a modif à mettre à jour
+function Form21() {
+
+    if(isset($_POST['pseudoducontact21']) && isset($_POST['mailducontact21']) && isset($_POST['telducontact21']) && isset($_POST['motdepasseducontact21']) && isset($_POST['motdepasseducontact21confirm']) && !empty($_POST['pseudoducontact21']) && !empty($_POST['mailducontact21']) && !empty($_POST['telducontact21']) && !empty($_POST['motdepasseducontact21']) && !empty($_POST['motdepasseducontact21confirm'])) {
+
+        if( $_POST['motdepasseducontact21'] === $_POST['motdepasseducontact21confirm'] ) {
+
+            
+            $pseudoducontact21Chars = htmlspecialchars($_POST['pseudoducontact21']);
+            $mailducontact21Chars = htmlspecialchars($_POST['mailducontact21']);
+            $telducontact21Chars = htmlspecialchars($_POST['telducontact21']);
+            $motdepasseducontact21Chars = htmlspecialchars($_POST['motdepasseducontact21']);
+            $motdepasseducontact21confirm21Chars = htmlspecialchars($_POST['motdepasseducontact21confirm']);
+            
+            
+            
+            
+            echo 'Pseudo : ' .$pseudoducontact21Chars. '<br>';
+            echo 'Mail : ' .$mailducontact21Chars. '<br>';
+            echo 'Téléphone : ' .$telducontact21Chars. '<br>';
+            echo 'Mot de passe : ' .$motdepasseducontact21Chars. '<br>';
+            echo 'Mot de passe confirm : ' .$motdepasseducontact21confirm21Chars. '<br>';
+
+        } else {
+            echo 'La confirmation de mot de passe est incorrect';
+        }
+
+        
+
+    } else {
+        echo 'Il manque des infos';
+    }
+}
+
+// function valid data pour checker les données
+function valid_data ($data) {
+    $data = trim($data);
+    $data = htmlspecialchars($data);
+    return($data);
+}
+
+////////////////////////////////////////////////////////FIN EXO 21
+
+
+
+
 
 ?>

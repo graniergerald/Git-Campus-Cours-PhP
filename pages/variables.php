@@ -30,15 +30,15 @@ $countprenomArray1 = count($prenomArray1);
 $PrenomAges = ['Marie' => 27, 'Thomas' => 29, 'Jennifer' => 21, 'Damien' => 29];
 $Produits = [
 
-    'Tong' => ['Quantité' => 20, 'Prix' => 32..'€', 'Description' => 'Des Tong licorne, pour avoir la classe à Dallas'],
+    'Tong' => ['Quantité : ' => 20, 'Prix' => 32..'€', 'Description: ' => 'Des Tong licorne, pour avoir la classe à Dallas. <br>'],
 
-    'Van\'s' => ['Quantité' => 15, 'Prix' => 66..'€', 'Description' => 'Des Van\'s tout juste sorti de l\'usine, elle sentent pas mal mais bon elles sont quand même jolie avec leur 30cm d\'épaisseur de semelles'],
+    'Van\'s' => ['Quantité : ' => 15, 'Prix' => 66..'€', 'Description: ' => 'Des Van\'s tout juste sorti de l\'usine, elle sentent le caoutchouc à plein nez mais bon elles sont quand même jolie avec leur 30cm d\'épaisseur de semelles. <br>'],
     
-    'Chaussons' => ['Quantité' => 28, 'Prix' => 15..'€', 'Description' => 'Des chaussons 100% plastiques pour respecter la convention collective 100% polluante'],
+    'Chaussons' => ['Quantité : ' => 28, 'Prix' => 15..'€', 'Description: ' => 'Des chaussons 100% plastiques pour respecter la convention collective 100% polluante. <br>'],
 
-    'Bottes' => ['Quantité' => 27, 'Prix' => 35..'€', 'Description' => 'Des bottes faites al\'arrache mais bon elles font le taf\''],
+    'Bottes' => ['Quantité : ' => 27, 'Prix' => 35..'€', 'Description: ' => 'Des bottes faites al\'arrache mais bon elles font le taf\'. <br>'],
     
-    'Ballerine' => ['Quantité' => 4, 'Prix' => 69..'€', 'Description' => 'Des ballerine à usage unique et pour la maudite sommes de 69eu, franchement ça vaux le coup'],
+    'Ballerine' => ['Quantité : ' => 4, 'Prix' => 69..'€', 'Description: ' => 'Des ballerine à usage unique et pour la maudite sommes de 69eu, franchement ça vaux le coup. <br> '],
     
 ];
 
@@ -92,6 +92,15 @@ $PrixWarmUp = [
     'Malteser' => ['Casino, prix' => 3, 'Leclerc, prix' => 4, 'Différence de prix' => $diffPdt4],
     
 ];   
+
+//exo17 return.
+
+$PrixTVAa = 50;
+$PrixTVAb = 100;
+$PrixTVAc = 112;
+$PrixTVAd = 45;
+$PrixTVAe = 31;
+
 
 
 ?>

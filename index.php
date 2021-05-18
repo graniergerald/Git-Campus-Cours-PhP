@@ -46,14 +46,14 @@
 
         <div class="div_exo2_conditions cards cardsConditions">
           <h2>Exo 2 sur les conditions</h2>
-          <p>Else et Elseif pour vérifier une condition de "inscrit" et "âge" : <?php exo2conditions($inscrit, $age) ?></p>
+          <p>Else et Elseif pour vérifier une condition de "inscrit" et "âge" : <?php exo2conditions($inscrit, $age) ?> La variable âge est directement modifier dans variables.php.</p>
         </div>
       </section>
 
       <section class="section_exo3_condition">
         <div class="div_exo3_conditions cards cardsConditions">
           <h2>Exo 3 sur les conditions</h3>
-          <p>Idem que l'exo 2 mais la condition est écris différemment : <?php exo3conditions($inscrit2, $age2) ?></p>
+          <p>Idem que l'exo 2 mais la condition de la fonction est écris différemment : <?php exo3conditions($inscrit2, $age2) ?></p>
         </div>
       </section>
     </div>
@@ -65,7 +65,7 @@
       <section class="section_exo4_condition">
         <div class="div_exo4_conditions cards cardsConditions">
           <h2>Exo 4 sur les conditions</h2>
-          <p>On créer 4 rôles superadmin, admin, user et anonymous. En fonction du rôle donné ( mannuellement ), on affiche une phrase. ( plus tard cela pourras être associé à un réel rôle.<?php exo4conditions($superadmin, $admin, $user, $anonymous, $visiteur1) ?></p>
+          <p>On créer 4 rôles superadmin, admin, user et anonymous. En fonction du rôle donné ( manuellement ), on affiche une phrase. ( plus tard cela pourras être associé à un réel rôle. Ex : <?php exo4conditions($superadmin, $admin, $user, $anonymous, $visiteur1) ?></p>
         </div>
       
       </section>
@@ -96,7 +96,7 @@
 
         <div class="border-right-left">
           <h2>Exo 7 sur un tableaux multidimenssionnel</h2>
-          <p>On crée 2 tableaux dans un tableaux et on selectionne les données à l'intérieur en se servant des index</p>
+          <p>On crée 2 tableaux dans un tableaux et on selectionne les données à l'intérieur en se servant des index : count($prenomArray1);</p>
           <p>Valeur de tableaux : <?php echo $FirstTableaux[0][1]?></p>
           <p>Valeur de tableaux : <?php echo $FirstTableaux [1][2]?></p>
         </div>
@@ -167,7 +167,7 @@
 
 
           <h2>Exo 12 Perso</h2>
-            <p>Je rapelle ma function précédente ( exo 11 ) pour mettre en paramètre un autre tableaux (Exo 10).<?php exo11ForEachArray ($Produits)  ?></p>
+            <p>Je rapelle ma fonction précédente ( exo 11 ) pour mettre en paramètre un autre tableaux (Exo 10).<?php exo11ForEachArray ($Produits)  ?></p>
         </div>
       </div>
 
@@ -179,8 +179,8 @@
 
       <section class="section_exo4_condition">
         <div class="div_exo4_conditions cards cardsConditions">
-          <h2>Exo 13 function addition sur les arguments</h2>
-          <p> On crée une function qui additionne en paramètre a et b. On met en paramètre 2 et 3.</p>
+          <h2>Exo 13 fonction addition sur les arguments</h2>
+          <p> On crée une fonction qui additionne en paramètre a et b. On met en paramètre 2 et 3.</p>
           <p> Le résultat est : <?php addition(2, 3) ?></p>
           
         </div>
@@ -190,7 +190,7 @@
 
       <section class="section_exo5_condition">
         <div class="div_exo5_conditions cards cardsConditions">
-        <h2>Exo 14 sur les functions</h2>
+        <h2>Exo 14 sur les fonctions</h2>
           <p>On appelle une fonction défini qui fait écho "..."</p>
           <p><?php prénomPerso($prénomPerso, $questionCommentVa) ?></p>
           <p> <?php ?></p>   
@@ -230,7 +230,9 @@
       <section class="section_exo3_condition">
         <div class="div_exo3_conditions cards cardsConditions">
           <h2>Exo 17 Return pour calculer des prix de TVA</h3>
-          <p> <?php prixTVA(2) ?></p>
+          <p> On créer une fonction pour chaque taux de TVA, cela calculera un prix hors taxe en prix TTC. On peut mettre en argument n'importe quel integer.</p>
+          <p>Fonction pour donner un prix TVA 20% : <?php AffichagePrixHT($PrixTVAa) ; prixTVA20($PrixTVAa); AffichagePrixTTC($PrixTVAa) ?> </p> 
+         
         </div>
       </section>
     </div>
@@ -251,15 +253,15 @@
       <section class="section_exo5_condition">
         <div class="div_exo5_conditions cards cardsConditions">
           <h2>Exo 19 sur des Addition et le typage</h2>
-          <p> On effectue une function addition et on test le typage de valeur qu'on met à l'intérieur.</p>
+          <p> On effectue une fonction addition et on test le typage de valeur qu'on met à l'intérieur.</p>
           <p>
           <?php additionB(3, 4)  ?>
           <?php additionB(3, 4.5)  ?>
           <?php additionB(3.5, 4.2)  ?>
           <?php additionB(3,'4Adrien')  ?>
           </p>
-          <p> La function additionB(3,'Adrien') ne marche pas car il y a une chaine de caractère. Ne pas hésiter à utiliser des directive de typage (ex : declare(strict_types=1)) pour éviter tout transtypage fait par Php. </p>
-          <p>function multreturn ($a, $b):int {} ( pour demander des integer dans la function.</p>
+          <p> La fonction additionB(3,'Adrien') ne marche pas car il y a une chaine de caractère. Il faut dans se cas utiliser des directives de typage (ex : declare(strict_types=1)) pour éviter tout transtypage fait par Php. </p>
+          <p>fonction multreturn ($a, $b):int {} ( pour demander des integer dans la fonction.</p>
         </div>
       </section>
     </div>
@@ -272,7 +274,7 @@
 
         <h2>Exo 20 sur le formulaire de contact</h2>
 
-        <p> On récupère les données tapé par l'utilisateur dans formulaire.php<?php  ?></p>
+        <p> On récupère les données tapé par l'utilisateur.<?php  ?></p>
 
         <form class="S'enregistrer" method="post" action="">
           <fieldset>
@@ -310,7 +312,7 @@
 
         <p>Voici les infos tapé par l'utilisateur : <?php AffichageDonnéeUser() ?></p>
 
-        <p>On test la faille XSS. On insère dans un input le script: < script>alert('Hacked !');<\script>. Une alerte JS s'affiche</p>
+        <p>On test la faille XSS. On insère dans un input le script: < script>alert('Hacked !');<\script>. Une alerte JS s'affiche.</p>
       </div>
 
     </section>
@@ -322,14 +324,43 @@
       <div class="div_2exo_cards cards cardConditions">
     
         <div class="border-right-left">
-          <h2>Exo 21 sur...</h2>
-          <p>blblblbl</p>
-          <p><?php  ?> </p>
-          <p>blblblb</p>
+          <h2>Exo 21 sur formulaire le retour</h2>
+
+          <form class="Inscription21" method="post" action="">
+            <legend>Inscription</legend>
+            <p>
+              <label for="pseudoducontact21">Pseudo</label>
+              <input type="text" name="pseudoducontact21" id="pseudoducontact21" maxlength="100" size="20" required >
+            </p>
+            
+            <p>
+              <label for="mailducontact21">Votre Mail</label>
+              <input type="email" name="mailducontact21" id="mailducontact21" maxlength="50" size="24" required>
+            </p>
+
+            <p>
+              <label for="telducontact21">Votre Téléphone</label>
+              <input type="number" name="telducontact21" id="telducontact21" maxlength="50" size="24" >
+            </p>
+
+            <p>
+              <label for="motdepasseducontact21">Mot de passe</label>
+              <input type="password" name="motdepasseducontact21" id="motdepasseducontact21" maxlength="20" size="20" required>
+            </p>
+
+            <p>
+              <label for="motdepasseducontact21confirm">Confirmation du mot de passe</label>
+              <input type="password" name="motdepasseducontact21confirm" id="motdepasseducontact21confirm" maxlength="20" size="20" required>
+            </p>
+          <input type="submit" value="Envoyer">
+
+		    </form>
+          <?php Form21() ?>
+          <p></p>
         </div>
 
         <div class="border-right-left">
-          <h2>Exo 22 sur...</h2>
+          <h2>Exo 22 sur les expressions régulières REGEX</h2>
           <p>hnhnhn</p>
           <p>pmpmpm</p>
           <p>klklklk <?php ?></p>
