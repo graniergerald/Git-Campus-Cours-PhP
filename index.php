@@ -360,7 +360,7 @@
         </div>
 
         <div class="border-right-left">
-          <h2>Exo 22 Base de donnée</h2>
+          <h2>Exo 22 Base de donnée. Le C du CRUD</h2>
           <p>On crée une base de donnée mycar_db. On y met 5 colonnes, ID, name, model, price et color. On fait la connexion avec la BDD avec une fonction. On créer une autre fonction pour insérer des donnée dans le tableaux SQL.</p>
           <p></p>
 
@@ -387,7 +387,7 @@
                 <input type="text" name="ColorCar" id="ColorCar" maxlength="20" size="17" required>
               </p>
 
-              <input type="submit" value="Envoyer">
+              <input type="submit" value="Enregistrer">
 
             </form>
 
@@ -397,8 +397,49 @@
 
 
       </div>
-
     </section>
+
+    <!-- Section 5 en ligne 3 exo -->
+    <div class="ExoConditions">
+      <section class="section_exo1_condition">
+
+        <div class="div_exo1_conditions cards cardsConditions">
+          <h2>Exo 23 Le R du CRUD</h2>
+          <div>
+          <select name="CarsSelect" id="CarsSelect">
+            <option value="">Svp choisissez une option</option>
+            <option value="AllCars"><?php echo $AllCars ?></option>
+            <option value="id1"><?php echo $idvoiture1 ?></option>
+            <option value="id2"><?php echo $idvoiture2 ?></option>
+            <option value="id3"><?php echo $idvoiture3 ?></option>
+            <option value="id4"><?php echo $idvoiture4 ?></option>
+            <option value="id5"><?php echo $idvoiture5 ?></option>
+          </select>
+          </div>
+          <p>On affiche un tableau des données de la base de donnée sous forme de tableau</p>
+          <p><?php ReadCar($name, $model, $price, $color); ?></p>
+
+        </div>
+      </section>
+
+      <section class="section_exo2_condition">
+
+        <div class="div_exo2_conditions cards cardsConditions">
+          <h2>Exo 24 Le U du CRUD</h2>
+          <p>blblbl</p>
+          <p> blbl <?php  ?></p>
+        </div>
+      </section>
+
+      <section class="section_exo3_condition">
+        <div class="div_exo3_conditions cards cardsConditions">
+          <h2>Exo 25 Le D du CRUD</h3>
+          <p> blblbl </p>
+          <p>blblbl <?php ?> </p> 
+         
+        </div>
+      </section>
+    </div>
 
 
     

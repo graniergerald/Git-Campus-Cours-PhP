@@ -312,7 +312,7 @@ function Connexion(&$conn) {
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         //statement pour faire la requete SQL.
-        echo "Connexion à la base de donnée reussi.";
+        // On met ceci en commentaire, on sais maintenant que le lien avec le base de donnée ce fait bien. echo "Connexion à la base de donnée reussi. ";
         //( pour être sûr qu'on s'est bien connecté à la BDD)
         // à mettre en fonction plus tard pour appeler et que ce soit plus simple
         
@@ -341,7 +341,7 @@ function InsertCar($name, $model, $price, $color) {
         $sth->bindValue(':color', $color);   
         $sth->execute();
 
-            echo 'Entrée ajoutée dans la table';
+            echo 'Entrée ajoutée dans la table. ';
     }
 
     catch(PDOException $e){
@@ -379,6 +379,50 @@ function FormInsertCar() {
     } else {
         echo 'Il manque des infos';
     }
+}
+
+
+///////////:: READ DU CRUD///
+
+
+function ReadCar($name, $model, $price, $color) {
+
+    $dbco;
+    
+    Connexion($dbco);
+
+    try {
+        $sth = $dbco->prepare("SELECT name,model,price,color FROM car"); 
+        $sth->execute();
+        $dataReadCar = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+            
+            
+            exo23ArrayDuR($dataReadCar);
+    }
+
+    catch(PDOException $e){
+        echo "Erreur :" .$e->getMessage();
+
+    }
+};
+
+
+function exo23ArrayDuR ($NomArray){
+
+    echo '
+    <table>
+    ';
+    foreach($NomArray as $key=>$value) {
+        echo '
+        <tr> <th> Tableau n°' .$key. '</th></tr>';
+        foreach($value as $keyb=>$valueb) {
+            echo '<tr><td>'  .$keyb. '</td><td>' .$valueb. '</td></tr> ';
+        }
+        
+    }
+
+    echo '</table>';
 }
 
 

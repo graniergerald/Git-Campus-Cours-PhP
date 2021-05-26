@@ -106,5 +106,12 @@ $PrixTVAe = 31;
     ///////
 
 
+    $AllCars = "Voici toute les voitures";
+    $idvoiture1 = "voiture 1";
+    $idvoiture2 = "voiture 2";
+    $idvoiture3 = "voiture 3";
+    $idvoiture4 = "voiture 4";
+    $idvoiture5 = "voiture 5";
+
 
 ?>
