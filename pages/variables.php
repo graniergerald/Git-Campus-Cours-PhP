@@ -75,7 +75,7 @@ $stock = "Le stock magasin des Oranges est de $stockOrange, le stock des Pèches
 
 //Warm Up tableaux diff de prix
 
-$diffPdt1 = 0;
+$diffPdt1 = ($value['Casino, prix'] - $value['Leclerc, prix']);
 $diffPdt2 = 0;
 $diffPdt3 = 0;
 $diffPdt4 = 0;
@@ -100,6 +100,10 @@ $PrixTVAb = 100;
 $PrixTVAc = 112;
 $PrixTVAd = 45;
 $PrixTVAe = 31;
+
+//////////////////// VARIABLE CONNEXION PDO
+
+    ///////
 
 
 

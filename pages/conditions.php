@@ -227,15 +227,26 @@ function additionB(float $a, float $b) {
     echo $a, ' + ' .$b. ' = ' .($a + $b). '<br>';
 };
 
+
+
+// exo formulaire de contact/inscription 
+
+// function valid data pour checker les données
+function valid_data ($data) {
+    $data = trim($data);
+    $data = htmlspecialchars($data);
+    return($data);
+}
+
 function AffichageDonnéeUser() {
 
     if(isset($_POST['prenomducontact']) && isset($_POST['nomducontact']) && isset($_POST['mailducontact']) && isset($_POST['Admincontact'])) {
 
         
-        $prenomducontactChars = htmlspecialchars($_POST['prenomducontact']);
-        $nomducontactChars = htmlspecialchars($_POST['nomducontact']);
-        $mailducontactChars = htmlspecialchars($_POST['mailducontact']);
-        $admincontactChars = htmlspecialchars($_POST['Admincontact']);
+        $prenomducontactChars = valid_data($_POST['prenomducontact']);
+        $nomducontactChars = valid_data($_POST['nomducontact']);
+        $mailducontactChars = valid_data($_POST['mailducontact']);
+        $admincontactChars = valid_data($_POST['Admincontact']);
 
         echo 'Prénom du contact : ' .$prenomducontactChars. '<br>';
         echo 'Nom du contact : ' .$nomducontactChars. '<br>';
@@ -254,11 +265,11 @@ function Form21() {
         if( $_POST['motdepasseducontact21'] === $_POST['motdepasseducontact21confirm'] ) {
 
             
-            $pseudoducontact21Chars = htmlspecialchars($_POST['pseudoducontact21']);
-            $mailducontact21Chars = htmlspecialchars($_POST['mailducontact21']);
-            $telducontact21Chars = htmlspecialchars($_POST['telducontact21']);
-            $motdepasseducontact21Chars = htmlspecialchars($_POST['motdepasseducontact21']);
-            $motdepasseducontact21confirm21Chars = htmlspecialchars($_POST['motdepasseducontact21confirm']);
+            $pseudoducontact21Chars = valid_data($_POST['pseudoducontact21']);
+            $mailducontact21Chars = valid_data($_POST['mailducontact21']);
+            $telducontact21Chars = valid_data($_POST['telducontact21']);
+            $motdepasseducontact21Chars = valid_data($_POST['motdepasseducontact21']);
+            $motdepasseducontact21confirm21Chars = valid_data($_POST['motdepasseducontact21confirm']);
             
             
             
@@ -280,14 +291,95 @@ function Form21() {
     }
 }
 
-// function valid data pour checker les données
-function valid_data ($data) {
-    $data = trim($data);
-    $data = htmlspecialchars($data);
-    return($data);
-}
-
 ////////////////////////////////////////////////////////FIN EXO 21
+
+/////////////////////// REQUETE BDD CRUD CO BDD ETC ///
+
+
+    
+
+function Connexion(&$conn) {
+    
+    $servername= 'localhost';
+    $bdname= 'mycar_db';
+    $username= 'root';
+    $password='root';
+    //on try de se connecter
+    try {
+        
+        $conn = new PDO("mysql:host=$servername;dbname=$bdname",$username, $password);
+        // on définit le mode d'erreur de PDO sur Exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        //statement pour faire la requete SQL.
+        echo "Connexion à la base de donnée reussi.";
+        //( pour être sûr qu'on s'est bien connecté à la BDD)
+        // à mettre en fonction plus tard pour appeler et que ce soit plus simple
+        
+    }
+    //On capture les exceptions si une exception est lancée et on affiche *les informations relatives à celle-ci*/
+    
+    catch(PDOException $e) {
+        echo "Erreur :" .$e->getMessage();
+        
+    }
+};
+
+function InsertCar($name, $model, $price, $color) {
+
+    $dbco;
+    
+    Connexion($dbco);
+
+    try {
+        $sth = $dbco->prepare("INSERT INTO car(name,model,price,color)
+        VALUES(:name,:model,:price,:color)");
+
+        $sth->bindValue(':name', $name);   
+        $sth->bindValue(':model', $model);   
+        $sth->bindValue(':price', $price);   
+        $sth->bindValue(':color', $color);   
+        $sth->execute();
+
+            echo 'Entrée ajoutée dans la table';
+    }
+
+    catch(PDOException $e){
+        echo "Erreur :" .$e->getMessage();
+
+    }
+};
+
+
+function FormInsertCar() {
+
+    if(isset($_POST['NameCar']) && isset($_POST['ModelCar']) && isset($_POST['PriceCar']) && isset($_POST['ColorCar']) && !empty($_POST['NameCar']) && !empty($_POST['ModelCar']) && !empty($_POST['PriceCar']) && !empty($_POST['ColorCar'])) {
+
+
+            
+            $NameCarChars = valid_data($_POST['NameCar']);
+            $ModelCarChars = valid_data($_POST['ModelCar']);
+            $PriceCarChars = valid_data($_POST['PriceCar']);
+            $ColorCarChars = valid_data($_POST['ColorCar']);
+            
+            
+            
+            
+            echo 'Le nom de la voiture qui a été écris et qui est stocké dans la BDD est : ' .$NameCarChars. '<br>';
+            echo 'Le modèle de la voiture qui a été écris et qui est stocké dans la BDD est : ' .$ModelCarChars. '<br>';
+            echo 'Le prix de la voiture qui a été écris et qui est stocké dans la BDD est : ' .$PriceCarChars. '<br>';
+            echo 'La couleur de la voiture qui a été écris et qui est stocké dans la BDD est : ' .$ColorCarChars. '<br>';
+
+            InsertCar($NameCarChars, $ModelCarChars, $PriceCarChars, $ColorCarChars);
+
+        
+
+        
+
+    } else {
+        echo 'Il manque des infos';
+    }
+}
 
 
 

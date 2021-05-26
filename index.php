@@ -231,7 +231,7 @@
         <div class="div_exo3_conditions cards cardsConditions">
           <h2>Exo 17 Return pour calculer des prix de TVA</h3>
           <p> On créer une fonction pour chaque taux de TVA, cela calculera un prix hors taxe en prix TTC. On peut mettre en argument n'importe quel integer.</p>
-          <p>Fonction pour donner un prix TVA 20% : <?php AffichagePrixHT($PrixTVAa) ; prixTVA20($PrixTVAa); AffichagePrixTTC($PrixTVAa) ?> </p> 
+          <p>Fonction pour donner un prix TVA 20% : <?php AffichagePrixHT($PrixTVAa) ; prixTVA20($PrixTVAa); AffichagePrixTTC($PrixTVAa) ?> A CORRIGER </p> 
          
         </div>
       </section>
@@ -360,10 +360,39 @@
         </div>
 
         <div class="border-right-left">
-          <h2>Exo 22 sur les expressions régulières REGEX</h2>
-          <p>hnhnhn</p>
-          <p>pmpmpm</p>
-          <p>klklklk <?php ?></p>
+          <h2>Exo 22 Base de donnée</h2>
+          <p>On crée une base de donnée mycar_db. On y met 5 colonnes, ID, name, model, price et color. On fait la connexion avec la BDD avec une fonction. On créer une autre fonction pour insérer des donnée dans le tableaux SQL.</p>
+          <p></p>
+
+          <div class="FormInsertCar">
+            <form class="InsertCar" method="post" action="">
+              <legend>Insérer de nouvelles voiture dans la base de donnée :</legend>
+              <p>
+                <label for="NameCar">Nom de la voiture</label>
+                <input type="text" name="NameCar" id="NameCar" maxlength="100" size="20" required>
+              </p>
+              
+              <p>
+                <label for="ModelCar">Modèle de voiture</label>
+                <input type="text" name="ModelCar" id="ModelCar" maxlength="50" size="20" required>
+              </p>
+
+              <p>
+                <label for="PriceCar">Prix de la voiture</label>
+                <input type="number" name="PriceCar" id="PriceCar" maxlength="50" size="18" required>
+              </p>
+
+              <p>
+                <label for="ColorCar">Couleur de la voiture</label>
+                <input type="text" name="ColorCar" id="ColorCar" maxlength="20" size="17" required>
+              </p>
+
+              <input type="submit" value="Envoyer">
+
+            </form>
+
+            <p><?php FormInsertCar() ?></p>
+          </div>
         </div>
 
 
