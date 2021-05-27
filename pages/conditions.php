@@ -385,20 +385,20 @@ function FormInsertCar() {
 ///////////:: READ DU CRUD///
 
 
-function ReadCar($name, $model, $price, $color) {
+function ReadCarGlobal() {
 
     $dbco;
     
     Connexion($dbco);
 
     try {
-        $sth = $dbco->prepare("SELECT name,model,price,color FROM car"); 
+        $sth = $dbco->prepare("SELECT name,model,price,color FROM car"); // rajouter ORDER BY price DESC pour trier par prix DESC ou ASC pour du croissant ou décroissant :) 
         $sth->execute();
         $dataReadCar = $sth->fetchAll(PDO::FETCH_ASSOC);
-
+        
             
+        return $dataReadCar;
             
-            exo23ArrayDuR($dataReadCar);
     }
 
     catch(PDOException $e){
@@ -406,16 +406,18 @@ function ReadCar($name, $model, $price, $color) {
 
     }
 };
+    $cars = ReadCarGlobal(); // affichage de la requête du dessus.
+
 
 
 function exo23ArrayDuR ($NomArray){
-
+    $i = 1;
     echo '
     <table>
     ';
     foreach($NomArray as $key=>$value) {
         echo '
-        <tr> <th> Tableau n°' .$key. '</th></tr>';
+        <tr> <th> Voiture n°' .$i++. '</th></tr>';
         foreach($value as $keyb=>$valueb) {
             echo '<tr><td>'  .$keyb. '</td><td>' .$valueb. '</td></tr> ';
         }
@@ -423,6 +425,42 @@ function exo23ArrayDuR ($NomArray){
     }
 
     echo '</table>';
+}
+
+
+function exo24ArrayDuR ($NomArray){
+    $i = 1;
+    echo '
+    <table>
+    ';
+    foreach($NomArray as $key=>$value) {
+        echo '
+        <tr> <th> Voiture n°' .$i++. '</th></tr>';
+        foreach($value as $keyb=>$valueb) {
+            echo '<tr><td>'  .$keyb. ' : ' .$valueb. '</td></tr> ';
+        }
+        
+    }
+
+    echo '</table>';
+}
+
+
+function exo25ArrayDuR ($NomArray){
+    $i = 1;
+    echo '
+    <div class="ExoConditions">
+    ';
+    foreach($NomArray as $key=>$value) {
+        echo '
+        <div class="div_exo1_conditions cards cardsConditions text-center"> Voiture n°' .$i++. '</br>';
+        foreach($value as $keyb=>$valueb) {
+            echo ' ' .$keyb. ' ' .$valueb. '</br> ';
+        }
+        echo '</div>';  
+    }
+
+    echo '</div>';
 }
 
 

@@ -113,5 +113,4 @@ $PrixTVAe = 31;
     $idvoiture4 = "voiture 4";
     $idvoiture5 = "voiture 5";
 
-
 ?>

@@ -405,19 +405,8 @@
 
         <div class="div_exo1_conditions cards cardsConditions">
           <h2>Exo 23 Le R du CRUD</h2>
-          <div>
-          <select name="CarsSelect" id="CarsSelect">
-            <option value="">Svp choisissez une option</option>
-            <option value="AllCars"><?php echo $AllCars ?></option>
-            <option value="id1"><?php echo $idvoiture1 ?></option>
-            <option value="id2"><?php echo $idvoiture2 ?></option>
-            <option value="id3"><?php echo $idvoiture3 ?></option>
-            <option value="id4"><?php echo $idvoiture4 ?></option>
-            <option value="id5"><?php echo $idvoiture5 ?></option>
-          </select>
-          </div>
           <p>On affiche un tableau des données de la base de donnée sous forme de tableau</p>
-          <p><?php ReadCar($name, $model, $price, $color); ?></p>
+          <p><?php exo23ArrayDuR($cars)  ?></p>
 
         </div>
       </section>
@@ -425,21 +414,35 @@
       <section class="section_exo2_condition">
 
         <div class="div_exo2_conditions cards cardsConditions">
-          <h2>Exo 24 Le U du CRUD</h2>
-          <p>blblbl</p>
-          <p> blbl <?php  ?></p>
+          <h2>Exo 24 R CRUD V2</h2>
+          <p> blbl <?php exo24ArrayDuR($cars)  ?></p>
         </div>
       </section>
 
       <section class="section_exo3_condition">
         <div class="div_exo3_conditions cards cardsConditions">
-          <h2>Exo 25 Le D du CRUD</h3>
-          <p> blblbl </p>
+          <h2>Exo 25 R du CRUD V3</h3>
+          <p>blblbl <?php  ?> </p> 
           <p>blblbl <?php ?> </p> 
          
         </div>
       </section>
     </div>
+
+
+    <!-- Section 1 en ligne 1 exo -->
+    <section class="section_exo1_variable">
+
+      <div class="div_exo1_variable cards exo20">
+
+        <h2>Exo 24 An other Tableau</h2>
+
+        <p> <?php exo25ArrayDuR ($cars)  ?></p>
+
+        
+      </div>
+
+    </section>
 
 
     
