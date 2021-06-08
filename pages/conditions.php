@@ -464,6 +464,57 @@ function exo25ArrayDuR ($NomArray){
 }
 
 
+//////////:UPDATE CRUD /////
+// requete :
+
+function UpdateCarGlobal() {
+
+    $dbco;
+    
+    Connexion($dbco);
+
+    try {
+        $sth = $dbco->prepare("UPDATE car 
+        SET name = :name, model = :model, price = :price, color = :color, WHERE id = :id");
+
+        $sth->bindValue(':name', $name, PDO::PARAM_STR);
+        $sth->bindValue(':model', $model, PDO::PARAM_STR);
+        $sth->bindValue(':price', $price, PDO::PARAM_STR);
+        $sth->bindValue(':color', $color, PDO::PARAM_STR);
+        $sth->bindValue(':id', $id, PDO::PARAM_INT);
+        $sth->execute();
+            
+    }
+
+    catch(PDOException $e){
+        echo "Erreur :" .$e->getMessage();
+
+    }
+};
+
+
+/////function CRUD DELETE
+
+function DeleteCarGlobal() {
+
+    $dbco;
+    
+    Connexion($dbco);
+
+    try {
+        $sth = $dbco->prepare("DELETE FROM car WHERE id = :id");
+        $sth->bindValue(':id', $id, PDO::PARAM_INT);
+        $sth->execute();
+            
+    }
+
+    catch(PDOException $e){
+        echo "Erreur :" .$e->getMessage();
+
+    }
+};
+
+
 
 
 

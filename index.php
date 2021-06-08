@@ -26,6 +26,7 @@
         <p class="presentation"> On appel les variables $presentation et $presentation2 pour des tests : <?php echo $presentation ?> ; <?php echo $presentation2 ?></p>
 
         <p class="stockfruits">On crée des variables sur des Oranges et des Pèches, on affiche le stock et on fait le cumul des 2 stocks : <?php echo $stock ?></p>
+        <p> Le stock des Oranges est de <?php echo $stockOrange ?>. <?php echo "Le stock des Peches est de $stockPeche" ?> </p>
       </div>
 
     </section>
@@ -129,6 +130,8 @@
 
       <section class="section_exo3_condition">
         <div class="div_exo3_conditions cards cardsConditions">
+          <h2>Test Exo Foreach Tableaux</h2>
+          <p> <?php ?></p>
           <h2>Exo 10 Boucle Foreach Le Retour</h3>
           <p>Le retour du ForEach : tableau multidimensionnelle associatif avec 5 produits çi-dessous.</p>
         </div>
@@ -143,7 +146,7 @@
     
         <h2>Exo 10 : </h2>
 
-        <p><? exo10ForEachArray($Produits)?></p>
+        <p><?php exo10ForEachArray($Produits)?></p>
 
         <p></p>
       </div>
@@ -390,6 +393,7 @@
               <input type="submit" value="Enregistrer">
 
             </form>
+            
 
             <p><?php FormInsertCar() ?></p>
           </div>
@@ -435,9 +439,10 @@
 
       <div class="div_exo1_variable cards exo20">
 
-        <h2>Exo 24 An other Tableau</h2>
+        <h2>Exo 25 Bis An other Tableau</h2>
 
         <p> <?php exo25ArrayDuR ($cars)  ?></p>
+        <p> <?php var_dump($cars) ?>/p>
 
         
       </div>
